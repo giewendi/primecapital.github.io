@@ -19,14 +19,14 @@ document.addEventListener("DOMContentLoaded", function () {
             if (window.scrollY > 0 && window.scrollY < 500) {
                 fullnav.classList.remove('fadeout');
                 fullnav.classList.add('scroll');
-                logo.src = "../media/name-logo-light.png";
+                logo.src = "./resources/media/name-logo-light.png";
             } else if (window.scrollY === 0) {
                 fullnav.classList.remove('fadeout');
                 fullnav.classList.remove('scroll');
-                logo.src = "../media/name-logo.png";
+                logo.src = "./resources/media/name-logo.png";
             } else {
                 fullnav.classList.add('fadeout');
-                logo.src = "../media/name-logo.png";
+                logo.src = "./resources/media/name-logo.png";
             }
         });
     } else {
