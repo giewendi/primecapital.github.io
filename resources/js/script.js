@@ -28,15 +28,15 @@ function loadTemplate(id, file) {
 
 // Load header and footer when the document is ready
 document.addEventListener("DOMContentLoaded", function() {
-    loadTemplate("footer-placeholder", "../templates/footer.html");
-    loadTemplate("hero-placeholder", "../templates/hero.html");
-    loadTemplate("offers-placeholder", "../templates/offers.html");
-    loadTemplate("how-we-help-placeholder", "../templates/how-we-help.html");
-    loadTemplate("process-placeholder", "../templates/process.html");
-    loadTemplate("testimonial-placeholder", "../templates/testimonial.html");
-    loadTemplate("faq-placeholder", "../templates/faq.html");
+    loadTemplate("footer-placeholder", "../../templates/footer.html");
+    loadTemplate("hero-placeholder", "../../templates/hero.html");
+    loadTemplate("offers-placeholder", "../../templates/offers.html");
+    loadTemplate("how-we-help-placeholder", "../../templates/how-we-help.html");
+    loadTemplate("process-placeholder", "../../templates/process.html");
+    loadTemplate("testimonial-placeholder", "../../templates/testimonial.html");
+    loadTemplate("faq-placeholder", "../../templates/faq.html");
 
     // Styles
-    loadTemplate("waves-top-placeholder", "../templates/waves-top.html");
-    loadTemplate("waves-bottom-placeholder", "../templates/waves-bottom.html");
+    loadTemplate("waves-top-placeholder", "../../templates/waves-top.html");
+    loadTemplate("waves-bottom-placeholder", "../../templates/waves-bottom.html");
 });
