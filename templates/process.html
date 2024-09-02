@@ -1,0 +1,131 @@
+<!-- Our Process Section -->
+<section id="process">
+    <div class="process-content">
+        <h2>Our Process</h2>
+        <p>We follow a streamlined process to ensure you receive the highest level of service:</p>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-icon">
+                    <img src="path/to/consultation-icon.svg" alt="Consultation Icon">
+                </div>
+                <div class="step-details">
+                    <h3>Consultation</h3>
+                    <p>We begin with a detailed consultation to understand your needs.</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="step-icon">
+                    <img src="path/to/strategy-icon.svg" alt="Strategy Development Icon">
+                </div>
+                <div class="step-details">
+                    <h3>Strategy Development</h3>
+                    <p>We create a customized plan that aligns with your goals.</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="step-icon">
+                    <img src="path/to/implementation-icon.svg" alt="Implementation Icon">
+                </div>
+                <div class="step-details">
+                    <h3>Implementation</h3>
+                    <p>Our team executes the plan efficiently and effectively.</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="step-icon">
+                    <img src="path/to/review-icon.svg" alt="Review & Optimize Icon">
+                </div>
+                <div class="step-details">
+                    <h3>Review & Optimize</h3>
+                    <p>We continually assess our work and make adjustments as needed.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Our Process Section */
+#process {
+    background-color: var(--light-color);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.process-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#process h2 {
+    font-size: 2rem;
+    color: var(--dark-color);
+    margin-bottom: 20px;
+}
+
+#process p {
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    margin-bottom: 40px;
+}
+
+.process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.process-step {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.step-icon {
+    flex: 0 0 60px; /* Fixed size for icons */
+}
+
+.step-icon img {
+    width: 60px;
+    height: 60px;
+}
+
+.step-details {
+    flex: 1;
+    text-align: left;
+}
+
+.step-details h3 {
+    font-size: 1.5rem;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+}
+
+.step-details p {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .process-steps {
+        flex-direction: column;
+    }
+
+    .process-step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .step-icon {
+        margin-bottom: 15px;
+    }
+}
+</style>

@@ -1,0 +1,115 @@
+<section id="home">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>Welcome to Prime Capital Assistants</h1>
+            <p>Your trusted partner in virtual assistance.</p>
+            <a href="../pages/services.html" class="cta-button">Get Started</a>
+        </div>
+        <div class="hero-image">
+            <img src="../resources/media/hero2.png" alt="Hero Image" id="heroImage">
+        </div>
+    </div>
+</section>
+
+<style>
+/* Hero Section */
+#home {
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20dvh 50px;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 70px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.hero-text {
+    flex: 1;
+    text-align: left;
+}
+
+#home h1 {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    margin: 0;
+}
+
+#home p {
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    margin-bottom: 50px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #168602;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #16860299;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .hero-image img {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    #home h1 {
+        font-size: 2rem;
+    }
+
+    #home p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .hero-image img {
+        max-width: 250px;
+    }
+}
+</style>

@@ -1,0 +1,108 @@
+<!-- What We Offer Section -->
+<section id="what-we-offer">
+    <h2>What We Offer</h2>
+    <p>Our services are designed to meet the unique needs of your business. We offer:</p>
+    <div class="cards-container">
+        <div class="offer-card">
+            <h3>Administrative Support</h3>
+            <p>Efficiently managing your daily tasks so you can focus on what matters most.</p>
+        </div>
+        <div class="offer-card">
+            <h3>Social Media Management</h3>
+            <p>Creating and managing your online presence to engage your audience.</p>
+        </div>
+        <div class="offer-card">
+            <h3>Customer Service</h3>
+            <p>Providing exceptional support to your clients, ensuring satisfaction.</p>
+        </div>
+        <div class="offer-card">
+            <h3>Project Management</h3>
+            <p>Overseeing your projects from start to finish with expert coordination.</p>
+        </div>
+        <div class="offer-card">
+            <h3>Data Entry & Organization</h3>
+            <p>Keeping your data organized and accessible for smooth operations.</p>
+        </div>
+    </div>
+</section>
+
+<style>
+/* What We Offer Section */
+#what-we-offer {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#what-we-offer h2 {
+    margin-bottom: 20px;
+    color: var(--dark-color);
+    font-size: 2rem;
+}
+
+#what-we-offer p {
+    margin-bottom: 40px;
+    color: var(--secondary-color);
+    font-size: 1.25rem;
+}
+
+/* Cards Container */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 20px;
+    gap: 40px;
+}
+
+/* Individual Offer Cards */
+.offer-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer-card h3 {
+    color: var(--dark-color);
+    font-size: 1.5rem;
+    margin: 0;
+    transition: opacity 0.3s ease;
+}
+
+.offer-card p {
+    color: var(--secondary-color);
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0;
+    position: absolute;
+    width: 200px;
+    top: 30px;
+    left: 45px;
+    margin: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover Effects */
+.offer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.offer-card:hover h3 {
+    opacity: 0;
+}
+
+.offer-card:hover p {
+    opacity: 1;
+}
+</style>
