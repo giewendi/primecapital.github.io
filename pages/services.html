@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../resources/css/navbar.css">
     <link rel="stylesheet" href="../resources/css/services.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
     <script src="../resources/js/navbar.js"></script>
 </head>
 <body>
@@ -23,7 +22,6 @@
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../pages/services.html">Services</a></li>
                     <li><a href="../pages/about.html">About</a></li>
-                    <li><a href="../pages/contact.html">Contact Us</a></li>
                 </ul>
                 <a href="../pages/contact.html" class="contact-button">Contact Us</a>
             </div>
@@ -32,44 +30,86 @@
             </div>
         </nav>
     </header>
-    
+
     <!-- Main Content -->
     <section id="services">
         <div class="container">
-            <h2>Our Services</h2>
-            <p>Prime Capital Assistants provides a variety of virtual assistant services tailored to your business needs. From managing your daily operations to handling specialized tasks, we are here to support your success.</p>
-    
-            <div class="service-card">
-                <h3>Administrative Support</h3>
-                <p>Keep your business running smoothly with our administrative support services. We handle scheduling, email management, and other crucial tasks to ensure you focus on what matters most.</p>
+            <!-- Title Section -->
+            <div class="services-title">
+                <h2>Our Services</h2>
+                <p>Prime Capital Assistants offers a range of virtual assistant services tailored to your business needs.</p>
             </div>
-    
-            <div class="service-card">
-                <h3>Social Media Management</h3>
-                <p>Enhance your online presence with our social media management services. Our team will create engaging content, manage your accounts, and analyze performance to boost your brand.</p>
-            </div>
-    
-            <div class="service-card">
-                <h3>Customer Service</h3>
-                <p>Deliver exceptional customer service with our dedicated team. We handle inquiries, resolve issues, and ensure that every customer interaction is positive and professional.</p>
-            </div>
-    
-            <div class="service-card">
-                <h3>Project Management</h3>
-                <p>Streamline your projects with our project management services. We assist with planning, coordinating tasks, and tracking progress to ensure timely and successful project completion.</p>
-            </div>
-    
-            <div class="service-card">
-                <h3>Data Entry & Organization</h3>
-                <p>Organize your data efficiently with our data entry services. We handle data input, management, and organization to keep your information accurate and accessible.</p>
+
+            <!-- Services Grid -->
+            <div class="services-grid">
+                <div class="service-item" data-service="General Virtual Assistant">
+                    <img src="../resources/media/general-va.jpg" alt="General Virtual Assistant">
+                    <h3>General Virtual Assistant</h3>
+                </div>
+                <div class="service-item" data-service="Executive Virtual Assistant">
+                    <img src="../resources/media/executive-va.jpg" alt="Executive Virtual Assistant">
+                    <h3>Executive Virtual Assistant</h3>
+                </div>
+                <div class="service-item" data-service="Customer Representative">
+                    <img src="../resources/media/customer-rep.jpg" alt="Customer Representative">
+                    <h3>Customer Representative</h3>
+                </div>
+                <div class="service-item" data-service="Sales Rep">
+                    <img src="../resources/media/sales-rep.jpg" alt="Sales Rep">
+                    <h3>Sales Rep</h3>
+                </div>
+                <div class="service-item" data-service="Social Media Moderator">
+                    <img src="../resources/media/social-media.jpg" alt="Social Media Moderator">
+                    <h3>Social Media Moderator</h3>
+                </div>
             </div>
         </div>
     </section>
-    
+
+    <!-- Call to Action Section -->
+    <div id="cta-placeholder"></div>
+
+
+    <!-- Popup Overlay -->
+    <div id="popup" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2>Service Details</h2>
+            <p id="popup-details">More information about the service will appear here...</p>
+        </div>
+    </div>
 
     <!-- Footer -->
     <div id="footer-placeholder"></div>
 
+    <!-- JavaScript -->
     <script src="../resources/js/script.js"></script>
+
+    <script>
+        // Show popup with service details
+document.querySelectorAll('.service-item').forEach(function(item) {
+    item.addEventListener('click', function() {
+        var serviceName = this.getAttribute('data-service');
+        document.getElementById('popup-details').textContent = "Details for " + serviceName;
+        document.getElementById('popup').style.display = 'flex';
+        document.body.classList.add('no-scroll'); // Disable page scroll
+    });
+});
+
+// Close popup when clicking outside the content
+document.getElementById('popup').addEventListener('click', function(event) {
+    if (event.target === this) {
+        this.style.display = 'none';
+        document.body.classList.remove('no-scroll'); // Re-enable page scroll
+    }
+});
+
+// Close popup when clicking the close button
+document.querySelector('.close-btn').addEventListener('click', function() {
+    document.getElementById('popup').style.display = 'none';
+    document.body.classList.remove('no-scroll'); // Re-enable page scroll
+});
+
+    </script>
 </body>
 </html>

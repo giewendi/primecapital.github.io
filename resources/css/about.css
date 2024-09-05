@@ -1,85 +1,134 @@
-/* General Styling */
-#about {
-    background-color: #ffffff;
-    padding: 100px 20%;
-    text-align: center;
-}
-
-#about .container {
-    max-width: 1200px;
+/* General Styles */
+.container {
+    width: 90%;
     margin: 0 auto;
 }
 
-#about h2 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    color: #333;
+/* Section 1: Title Section */
+#about-title {
+    height: 60dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f7f7f7;
 }
 
-#about p {
-    font-size: 1em;
-    color: #666;
-    margin-bottom: 30px;
+#about-title h2 {
+    font-size: 2.5rem;
+    color: #168602;
+}
+
+#about-title p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+/* Section 2: About Section */
+#about-content {
+    padding: 50px 0;
+    background-color: #ffffff;
+}
+
+#about-content h2 {
+    margin-bottom: 20px;
+}
+
+#about-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Mission and Vision Sections */
+.mission-vision-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0;
+    gap: 30px;
+}
+
+.mission-vision-content .image {
+    flex: 1;
+}
+
+.mission-vision-content .image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.mission-vision-content .text {
+    flex: 1;
+    text-align: left;
+}
+
+.mission-vision-content .text h3 {
+    font-size: 2rem;
+    color: #168602;
+}
+
+.mission-vision-content .text p {
+    font-size: 1.1rem;
+    color: #555;
     line-height: 1.6;
 }
 
-#about h3 {
-    font-size: 1em;
-    margin-bottom: 15px;
-    color: #333;
+/* Section 3: Mission */
+#mission {
+    background-color: #f4f4f4;
 }
 
-#about ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: left;
-    display: inline-block;
+#mission .text {
+    text-align: right;
+    order: 1;
 }
 
-#about li {
+#mission .image {
+    order: 2;
+}
+
+/* Section 4: Vision */
+#vision {
+    background-color: #ffffff;
+}
+
+#vision .text {
+    order: 2;
+}
+
+#vision .image {
+    order: 1;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .mission-vision-content {
+        flex-direction: column;
+    }
+
+    #mission .text,
+    #mission .image,
+    #vision .text,
+    #vision .image {
+        order: 1;
+        text-align: center;
+    }
+
+    #vision .text {
+        order: 2;
+    }
+}
+
+
+.cta-button {
+    background-color: white;
+    color: #168602;
+    border: none;
+    padding: 15px 30px;
     font-size: 1.1em;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-#about strong {
-    color: #168602; /* Matches the green color used elsewhere */
-}
-
-/* Responsive Design */
-@media (min-width: 768px) {
-    #about h2 {
-        font-size: 2.8em;
-    }
-
-    #about p {
-        font-size: 1.2em;
-    }
-
-    #about h3 {
-        font-size: 2.2em;
-    }
-
-    #about li {
-        font-size: 1.2em;
-    }
-}
-
-@media (min-width: 992px) {
-    #about h2 {
-        font-size: 3em;
-    }
-
-    #about p {
-        font-size: 1.3em;
-    }
-
-    #about h3 {
-        font-size: 2.4em;
-    }
-
-    #about li {
-        font-size: 1.3em;
-    }
+    border-radius: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }

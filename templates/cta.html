@@ -1,0 +1,76 @@
+<section id="call-to-action">
+    <div class="call-to-action-content">
+        <h3>Ready to Get Started?</h3>
+        <p>Contact us today to learn more about how we can support your business.</p>
+        <a href="./contact.html" class="cta-button">
+            <span class="material-icons">mail_outline</span> <!-- Default icon -->
+        </a>
+    </div>
+</section>
+
+<style>
+    /* Call to Action Section */
+#call-to-action {
+    background-color: #168602;
+    color: white;
+    padding: 40px 20px;
+    margin: 0;
+    text-align: center; /* Center text in the section */
+}
+
+#call-to-action h3 {
+    margin-bottom: 0;
+    font-size: 24px; /* Adjust as needed */
+}
+
+#call-to-action p {
+    font-size: 16px; /* Adjust as needed */
+}
+
+#call-to-action .cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    color: #168602;
+    border: 2px solid white;
+    text-decoration: none;
+    font-size: 3rem;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    position: relative;
+}
+
+#call-to-action .cta-button .material-icons {
+    font-size: 2rem;
+    transition: opacity 0.3s;
+}
+
+#call-to-action .cta-button:hover {
+    background-color: #168602;
+    color: white;
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+#call-to-action .cta-button:hover .material-icons {
+    opacity: 0;
+}
+
+#call-to-action .cta-button:hover::after {
+    content: '✈️'; /* Use the paper plane emoji or a different icon if preferred */
+    font-size: 24px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: white;
+    transition: opacity 0.3s;
+    opacity: 1; /* Ensure the hover icon is visible */
+}
+</style>

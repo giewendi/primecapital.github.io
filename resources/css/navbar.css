@@ -63,7 +63,7 @@ nav ul li a {
     background-color: #168602;
     padding: 10px 20px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 12px;
     margin-left: 15px;
     transition: background-color 0.3s ease;
 }

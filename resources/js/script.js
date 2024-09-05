@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
     loadTemplate("process-placeholder", "../../templates/process.html");
     loadTemplate("testimonial-placeholder", "../../templates/testimonial.html");
     loadTemplate("faq-placeholder", "../../templates/faq.html");
+    loadTemplate("cta-placeholder", "../../templates/cta.html");
 
     // Styles
     loadTemplate("waves-top-placeholder", "../../templates/waves-top.html");
