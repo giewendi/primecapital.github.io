@@ -1,10 +1,18 @@
-function loadTemplate(id, file) {
+function loadTemplate(id, file, hrefParam = null) {
     const element = document.getElementById(id);
     if (element) {  // Ensure the element exists before trying to set innerHTML
         fetch(file)
             .then(response => response.text())
             .then(data => {
                 element.innerHTML = data;
+
+                // If hrefParam is passed, change the href of the anchor with class "cta-button"
+                if (hrefParam) {
+                    const ctaButton = document.querySelector(`#${id} .cta-button`);
+                    if (ctaButton) {
+                        ctaButton.setAttribute('href', hrefParam);
+                    }
+                }
 
                 // If the header is loaded, attach the hamburger menu event listener
                 if (id === "header-placeholder") {
@@ -29,13 +37,6 @@ function loadTemplate(id, file) {
 // Load header and footer when the document is ready
 document.addEventListener("DOMContentLoaded", function() {
     loadTemplate("footer-placeholder", "../../templates/footer.html");
-    loadTemplate("hero-placeholder", "../../templates/hero.html");
-    loadTemplate("offers-placeholder", "../../templates/offers.html");
-    loadTemplate("how-we-help-placeholder", "../../templates/how-we-help.html");
-    loadTemplate("process-placeholder", "../../templates/process.html");
-    loadTemplate("testimonial-placeholder", "../../templates/testimonial.html");
-    loadTemplate("faq-placeholder", "../../templates/faq.html");
-    loadTemplate("cta-placeholder", "../../templates/cta.html");
 
     // Styles
     loadTemplate("waves-top-placeholder", "../../templates/waves-top.html");

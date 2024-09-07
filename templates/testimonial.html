@@ -1,4 +1,8 @@
 <section id="testimonial">
+    <div class="testimonial-heading">
+        <h2>Testimonials</h2>
+        <p>Check out our previous clients reviews!</p>
+    </div>
     <div class="testimonial-wrapper">
       <div class="testimonial-item">
         <div class="testimonial-image">
@@ -27,8 +31,20 @@
 <style type="text/css">
 #testimonial {
   color: #fff;
-  padding: 50px 10px;
+  padding: 0 10px 50px 10px;
   overflow: hidden;
+}
+
+.testimonial-heading h2{
+  font-size: 2rem;
+    color: var(--dark-color);
+    margin-bottom: 20px;
+}
+
+.testimonial-heading p{
+  font-size: 1.25rem;
+    color: var(--secondary-color);
+    margin-bottom: 60px;
 }
 
 .testimonial-wrapper {
@@ -52,6 +68,10 @@
   flex: 1;
   max-width: 45%;
   text-align: center;
+  transition: transform .2s ease;
+}
+.testimonial-item:hover {
+  transform: scale(1.03);
 }
 
 .testimonial-image {

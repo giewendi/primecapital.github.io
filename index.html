@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./resources/css/navbar.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <script src="resources/js/navbar.js"></script>
+    <script src="./resources/js/navbar.js"></script>
     
 </head>
 <body>
@@ -23,7 +23,7 @@
         <nav>
             <div class="nav-links">
                 <ul>
-                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./index.html" class="active">Home</a></li>
                     <li><a href="./pages/services.html">Services</a></li>
                     <li><a href="./pages/about.html">About</a></li>
                 </ul>
@@ -52,10 +52,7 @@
 
 
     <!-- Services Hyperlink -->
-    <section id="services-link">
-        <a href="./pages/services.html" class="cta-link">Explore Our Services</a>
-        <p>See the full range of virtual assistance services we offer.</p>
-    </section>
+    <div id="services-cta-placeholder"></div>
 
 
     <!-- Call to Action Section -->
@@ -68,5 +65,17 @@
     <!-- JavaScript -->
     <script src="./resources/js/script.js"></script>
     <script src="./resources/js/testimonial.js"></script>
+    <script>
+        // Load Sections
+        loadTemplate("hero-placeholder", "./templates/hero.html");
+        loadTemplate("offers-placeholder", "./templates/offers.html");
+        loadTemplate("how-we-help-placeholder", "./templates/how-we-help.html");
+        loadTemplate("process-placeholder", "./templates/process.html");
+        loadTemplate("testimonial-placeholder", "./templates/testimonial.html");
+        // loadTemplate("faq-placeholder", "./templates/faq.html");
+        loadTemplate("services-cta-placeholder", "./templates/services-cta.html");
+
+        loadTemplate("cta-placeholder", "./templates/cta.html", './pages/contact.html');
+    </script>
 </body>
 </html>

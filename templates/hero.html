@@ -19,6 +19,7 @@
     justify-content: center;
     align-items: center;
     padding: 15dvh 50px;
+    overflow: hidden;
 }
 
 .hero-content {
@@ -33,6 +34,7 @@
 .hero-text {
     flex: 1;
     text-align: left;
+    animation: popIn 1s forwards;
 }
 
 #home h1 {
@@ -74,6 +76,33 @@
     max-width: 500px;
     height: auto;
     object-fit: cover;
+    animation: slideLeft 1s forwards;
+}
+
+@keyframes slideLeft  {
+	0% {
+		transform: translateX(500px);
+	}
+    65%{
+        transform: translateX(-50px);
+    }
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes popIn  {
+	0% {
+        opacity: 0;
+		transform: scale(.7);
+	}
+    65%{
+        opacity: 1;
+		transform: scale(1.03);
+    }
+	100% {
+		transform: scale(1);
+	}
 }
 
 /* Responsive Design */

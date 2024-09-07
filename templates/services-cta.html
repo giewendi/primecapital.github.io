@@ -1,0 +1,67 @@
+<section id="services-link">
+    <a href="./pages/services.html" class="cta-link">See Virtual Assistant Services</a>
+    <p>See the full range of virtual assistance services we offer.</p>
+</section>
+
+<style>
+    /* Services Hyperlink */
+#services-link {
+    background-color: #fff;
+    margin-bottom: -20px;
+    padding: 40px;
+    text-align: center; /* Center align text */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: relative; /* For pseudo-element positioning */
+    overflow: hidden; /* Ensures hover effects don't overflow */
+}
+
+#services-link a.cta-link {
+    display: inline-block;
+    color: #168602;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold; /* Bold text */
+    padding: 8px 20px;
+    border-radius: 25px; /* Rounded corners */
+    background-color: #fff;
+    border: 2px solid #168602; /* Border color */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+#services-link a.cta-link:hover {
+    background-color: #168602; /* Background color on hover */
+    color: white; /* Text color on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+#services-link a.cta-link::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(59, 83, 77, 0.1), transparent);
+    transition: all .5s ease-in-out;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+#services-link a.cta-link:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    width: 100dvw;
+    height: 600%;
+}
+
+#services-link p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333; /* Adjust text color for contrast */
+}
+
+
+
+</style>

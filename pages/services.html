@@ -43,23 +43,23 @@
             <!-- Services Grid -->
             <div class="services-grid">
                 <div class="service-item" data-service="General Virtual Assistant">
-                    <img src="../resources/media/general-va.jpg" alt="General Virtual Assistant">
+                    <img src="../resources/media/virtual-assisstant-2.jpg" alt="General Virtual Assistant">
                     <h3>General Virtual Assistant</h3>
                 </div>
                 <div class="service-item" data-service="Executive Virtual Assistant">
-                    <img src="../resources/media/executive-va.jpg" alt="Executive Virtual Assistant">
+                    <img src="../resources/media/virtual-assisstant.jpg" alt="Executive Virtual Assistant">
                     <h3>Executive Virtual Assistant</h3>
                 </div>
                 <div class="service-item" data-service="Customer Representative">
-                    <img src="../resources/media/customer-rep.jpg" alt="Customer Representative">
+                    <img src="../resources/media/virtual-assisstant-2.jpg" alt="Customer Representative">
                     <h3>Customer Representative</h3>
                 </div>
                 <div class="service-item" data-service="Sales Rep">
-                    <img src="../resources/media/sales-rep.jpg" alt="Sales Rep">
+                    <img src="../resources/media/virtual-assisstant.jpg" alt="Sales Rep">
                     <h3>Sales Rep</h3>
                 </div>
                 <div class="service-item" data-service="Social Media Moderator">
-                    <img src="../resources/media/social-media.jpg" alt="Social Media Moderator">
+                    <img src="../resources/media/virtual-assisstant-2.jpg" alt="Social Media Moderator">
                     <h3>Social Media Moderator</h3>
                 </div>
             </div>
@@ -87,28 +87,31 @@
 
     <script>
         // Show popup with service details
-document.querySelectorAll('.service-item').forEach(function(item) {
-    item.addEventListener('click', function() {
-        var serviceName = this.getAttribute('data-service');
-        document.getElementById('popup-details').textContent = "Details for " + serviceName;
-        document.getElementById('popup').style.display = 'flex';
-        document.body.classList.add('no-scroll'); // Disable page scroll
-    });
-});
+        document.querySelectorAll('.service-item').forEach(function(item) {
+            item.addEventListener('click', function() {
+                var serviceName = this.getAttribute('data-service');
+                document.getElementById('popup-details').textContent = "Sample Details for " + serviceName;
+                document.getElementById('popup').style.display = 'flex';
+                document.body.classList.add('no-scroll'); // Disable page scroll
+            });
+        });
 
-// Close popup when clicking outside the content
-document.getElementById('popup').addEventListener('click', function(event) {
-    if (event.target === this) {
-        this.style.display = 'none';
-        document.body.classList.remove('no-scroll'); // Re-enable page scroll
-    }
-});
+        // Close popup when clicking outside the content
+        document.getElementById('popup').addEventListener('click', function(event) {
+            if (event.target === this) {
+                this.style.display = 'none';
+                document.body.classList.remove('no-scroll'); // Re-enable page scroll
+            }
+        });
 
-// Close popup when clicking the close button
-document.querySelector('.close-btn').addEventListener('click', function() {
-    document.getElementById('popup').style.display = 'none';
-    document.body.classList.remove('no-scroll'); // Re-enable page scroll
-});
+        // Close popup when clicking the close button
+        document.querySelector('.close-btn').addEventListener('click', function() {
+            document.getElementById('popup').style.display = 'none';
+            document.body.classList.remove('no-scroll'); // Re-enable page scroll
+        });
+
+        
+        loadTemplate("cta-placeholder", "../templates/cta.html", './contact.html');
 
     </script>
 </body>
