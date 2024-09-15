@@ -101,3 +101,132 @@ background: #fff;
 background: #fefefe; 
 }
 /*END SCROLLBAR*/
+
+
+
+/* Navbar */
+.full-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%; 
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+}
+
+.full-navbar.scroll {
+    margin: 0;
+    padding: 15px 10%;
+    background-color: #252721;
+}
+
+.full-navbar.scroll ul li a{
+    color: #f1f1f1;
+}
+
+.full-navbar.fadeout {
+    opacity: 0;
+    z-index: 0;
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #222; 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-button {
+    color: #fff;
+    background-color: #168602;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 12px;
+    margin-left: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #16860299; /* Lighter dark color on hover */
+}
+
+/* Hamburger Icon */
+.hamburger-icon {
+    display: none;
+    cursor: pointer;
+    margin-left: 15px; /* Added margin to avoid overlap */
+}
+
+.hamburger-icon .material-icons {
+    color: #222; /* Dark icon color */
+    font-size: 30px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #222; /* Dark background for the mobile menu */
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+    }
+
+    .nav-links ul li {
+        margin: 10px 0;
+        color: #eeeeee; 
+    }
+
+    .nav-links ul li a {
+        color: #eeeeee; 
+    }
+
+    .contact-button {
+        margin: 20px 0;
+        width: calc(100% - 40px); /* Ensure full width with padding considered */
+    }
+
+    .hamburger-icon {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
